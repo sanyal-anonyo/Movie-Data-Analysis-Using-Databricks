@@ -97,6 +97,20 @@
       "queryLines": [
         "SELECT * FROM movie.movie_gold.movie_genre_rating_amazon_prime"
       ]
+    },
+    {
+      "name": "83e0dc43",
+      "displayName": "movie_yearly_rating_netflix",
+      "queryLines": [
+        "SELECT * FROM movie.movie_gold.movie_yearly_rating_netflix"
+      ]
+    },
+    {
+      "name": "f7052787",
+      "displayName": "movie_yearly_rating_amazon_prime",
+      "queryLines": [
+        "SELECT * FROM movie.movie_gold.movie_yearly_rating_amazon_prime"
+      ]
     }
   ],
   "pages": [
@@ -435,6 +449,21 @@
                   "scale": {
                     "type": "quantitative"
                   }
+                },
+                "color": {
+                  "fieldName": "platform_name",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "Netflix",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 6
+                        }
+                      }
+                    ]
+                  }
                 }
               },
               "frame": {
@@ -506,7 +535,13 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "avg(IMDb_rating)"
+                  "fieldName": "avg(IMDb_rating)",
+                  "style": {
+                    "color": {
+                      "themeColorType": "visualizationColors",
+                      "position": 1
+                    }
+                  }
                 }
               },
               "frame": {
@@ -545,7 +580,13 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "avg(Rotten_Tomatoes_rating)"
+                  "fieldName": "avg(Rotten_Tomatoes_rating)",
+                  "style": {
+                    "color": {
+                      "themeColorType": "visualizationColors",
+                      "position": 1
+                    }
+                  }
                 }
               },
               "frame": {
@@ -584,7 +625,13 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "max(IMDb_rating)"
+                  "fieldName": "max(IMDb_rating)",
+                  "style": {
+                    "color": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    }
+                  }
                 }
               },
               "frame": {
@@ -625,6 +672,10 @@
                 "value": {
                   "fieldName": "max(Rotten_Tomatoes_rating)",
                   "style": {
+                    "color": {
+                      "themeColorType": "visualizationColors",
+                      "position": 3
+                    },
                     "rules": [
                       {
                         "condition": {
@@ -672,7 +723,13 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "min(IMDb_rating)"
+                  "fieldName": "min(IMDb_rating)",
+                  "style": {
+                    "color": {
+                      "themeColorType": "visualizationColors",
+                      "position": 4
+                    }
+                  }
                 }
               },
               "frame": {
@@ -711,7 +768,13 @@
               "widgetType": "counter",
               "encodings": {
                 "value": {
-                  "fieldName": "min(Rotten_Tomatoes_rating)"
+                  "fieldName": "min(Rotten_Tomatoes_rating)",
+                  "style": {
+                    "color": {
+                      "themeColorType": "visualizationColors",
+                      "position": 4
+                    }
+                  }
                 }
               },
               "frame": {
@@ -1182,7 +1245,7 @@
           },
           "position": {
             "x": 0,
-            "y": 0,
+            "y": 6,
             "width": 6,
             "height": 6
           }
@@ -1280,7 +1343,7 @@
           },
           "position": {
             "x": 0,
-            "y": 6,
+            "y": 0,
             "width": 6,
             "height": 6
           }
@@ -1484,6 +1547,202 @@
             "width": 6,
             "height": 8
           }
+        },
+        {
+          "widget": {
+            "name": "905b4feb",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "83e0dc43",
+                  "fields": [
+                    {
+                      "name": "release_year",
+                      "expression": "`release_year`"
+                    },
+                    {
+                      "name": "avg_IMDb_rating",
+                      "expression": "`avg_IMDb_rating`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "release_year",
+                  "displayName": "Year",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_IMDb_rating",
+                  "displayName": "Average IMDb Rating",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Release Year vs Avg IMDb Rating",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 26,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "7aa3eebf",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "83e0dc43",
+                  "fields": [
+                    {
+                      "name": "release_year",
+                      "expression": "`release_year`"
+                    },
+                    {
+                      "name": "avg_Rotten_Tomatoes_rating",
+                      "expression": "`avg_Rotten_Tomatoes_rating`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "release_year",
+                  "displayName": "Year",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_Rotten_Tomatoes_rating",
+                  "displayName": "Average Rotten Tomatoes Rating",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Release Year vs Average Rotten Tomatoes Rating",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 32,
+            "width": 6,
+            "height": 6
+          }
         }
       ],
       "pageType": "PAGE_TYPE_CANVAS"
@@ -1588,7 +1847,7 @@
           },
           "position": {
             "x": 0,
-            "y": 0,
+            "y": 6,
             "width": 6,
             "height": 6
           }
@@ -1686,7 +1945,7 @@
           },
           "position": {
             "x": 0,
-            "y": 6,
+            "y": 0,
             "width": 6,
             "height": 6
           }
@@ -1889,6 +2148,202 @@
             "y": 18,
             "width": 6,
             "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "fe8b5468",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f7052787",
+                  "fields": [
+                    {
+                      "name": "release_year",
+                      "expression": "`release_year`"
+                    },
+                    {
+                      "name": "avg_IMDb_rating",
+                      "expression": "`avg_IMDb_rating`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "release_year",
+                  "displayName": "Year",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_IMDb_rating",
+                  "displayName": "Average IMDb Rating",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Release Year vs Avg IMDb Rating",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 26,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "67016e58",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f7052787",
+                  "fields": [
+                    {
+                      "name": "release_year",
+                      "expression": "`release_year`"
+                    },
+                    {
+                      "name": "avg_Rotten_Tomatoes_rating",
+                      "expression": "`avg_Rotten_Tomatoes_rating`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "release_year",
+                  "displayName": "Year",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_Rotten_Tomatoes_rating",
+                  "displayName": "Average Rotten Tomatoes Rating",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Release Year vs Average Rotten Tomatoes Rating",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 32,
+            "width": 6,
+            "height": 6
           }
         }
       ],
