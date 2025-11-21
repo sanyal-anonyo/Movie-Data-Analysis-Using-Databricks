@@ -43,4 +43,12 @@ In this notebook we load the csv file into a record in bronze layer called movie
 
 This table will be the source of data for us to build the tables in Silver Layer.
 
-## Load Data in Gold
+## Load Data in Silver
+
+As part of Cleaning and Transforming exercise in this step we are also doing a basic bit of data modelling. We have created a schema to separate out Master Data and Transactional Data.<br>
+
+Before proceeding let us see the ERD Diagram of the Silver layer schema that we have created.
+
+![](ERD.jpg)
+
+Let's break down the motivation behind the data model.<br>
