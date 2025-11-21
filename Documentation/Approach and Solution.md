@@ -23,7 +23,7 @@ It contains the following fields:-
 
 ## Creation of Medallion Architecture
 
-Notebook Path: Movie-Data-Engineering-Using-Databricks/Create medallion Architecture - movie/create medellion architecture for movies.ipynb<br>
+**Notebook Path:** _Movie-Data-Engineering-Using-Databricks/Create medallion Architecture - movie/create medellion architecture for movies.ipynb_<br>
 
 With notebook we creating the Medallion Architecture. First we create the Catalog named movies. Inside the catalog we create three Schemas:-
 - movie_bronze
@@ -35,7 +35,7 @@ Once the notebook is run successfully we will see the following output in Catalo
 
 ## Load Data in Bronze
 
-Notebook Path: Movie-Data-Engineering-Using-Databricks/Job pipeline setup for refresh Bronze, Silver and Gold layer Data/Create job pipeline for refreshing bronze and silver layer.ipynb<br>
+**Notebook Path:** _Movie-Data-Engineering-Using-Databricks/Job pipeline setup for refresh Bronze, Silver and Gold layer Data/Create job pipeline for refreshing bronze and silver layer.ipynb_<br>
 
 In this notebook we load the csv file into a record in bronze layer called movies. The table is created as movie.movie_bronze.movies. It contains the raw data as it is we have in the csv source file.
 
