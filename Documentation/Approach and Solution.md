@@ -31,7 +31,7 @@ With notebook we creating the Medallion Architecture. First we create the Catalo
 - movie_gold
 
 Once the notebook is run successfully we will see the following output in Catalog
-![](medallion architecture.jpg)
+![](medallion_architecture.jpg)
 
 ## Load Data in Bronze
 
