@@ -2,14 +2,8 @@
 
 ## Overview
 
-This project leverages Databricks Medallion Architecture to build an automated movie data pipeline. Raw CSV data is ingested into the Bronze layer, cleaned and transformed into the Silver layer, and aggregated into Gold layer views for analytics. These views power Databricks dashboards for visualization. A Databricks Job Pipeline automates the entire process, ensuring efficiency and scalability.
+This project uses Databricks Medallion Architecture to build an automated movie data pipeline. Raw CSV data is ingested into the Bronze layer, cleaned and transformed into the Silver layer, and aggregated into Gold layer views for analytics. These views power Databricks dashboards for visualization, while a job pipeline automates the entire workflow for efficiency and scalability.
 
-### THE OBJECTIVE
-
-- Implement the Medallion Architecture in a Databricks environment.
-- Understand data flow across Bronze, Silver, and Gold layers.
-- Explore Databricks dashboard functionality for data visualization.
-- Configure and schedule Databricks jobs to automate the pipeline and ensure smooth execution of data transformations.
 
 ## PROBLEM STATEMENT
 
@@ -31,13 +25,6 @@ Following is a complete list of all project deliverables:
 <tr><td>Job Pipeline Automation	</td><td>Design and configure a Databricks Job Pipeline to automate ingestion, transformation, and dashboard updates.</td></tr>
 </table>
 
-## GOALS VS DELIVERABLES
-<table>
-<tr><th>
-PROJECT GOAL	</th>	<th>CORRESPONDING DELIVERABLE</th></tr>
-<tr><td>Implement the Medallion Architecture in Databricks	</td><td>Bronze Layer Delta Table, Silver Layer Transformation, Gold Layer Views</td></tr>
-<tr><td>Understand and manage data flow across layers	</td><td>Structured pipeline from Bronze → Silver → Gold</td></tr>
-<tr><td>Enable data visualization and insights	</td><td>Databricks Dashboard built on Gold layer views</td></tr>
-<tr><td>Ensure automation and scalability of the workflow	</td><td>Databricks Job Pipeline for end-to-end automation</td></tr>
-</table>
+![](Documentation/Architecture)
+
 
