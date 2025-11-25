@@ -187,7 +187,7 @@
                 ]
               },
               "frame": {
-                "title": "Frequency of Movie Release Years",
+                "title": "Frequency of Movies Released Yearly",
                 "showTitle": true
               },
               "mark": {
@@ -464,6 +464,9 @@
                       }
                     ]
                   }
+                },
+                "label": {
+                  "show": true
                 }
               },
               "frame": {
@@ -545,14 +548,14 @@
                 }
               },
               "frame": {
-                "title": "Average IMDb Rating Netflix",
+                "title": "Average IMDb Rating",
                 "showTitle": true
               }
             }
           },
           "position": {
-            "x": 0,
-            "y": 3,
+            "x": 1,
+            "y": 0,
             "width": 1,
             "height": 3
           }
@@ -635,7 +638,7 @@
                 }
               },
               "frame": {
-                "title": "Highest rated movie title as per IMDb",
+                "title": "Highest IMDb Rating",
                 "showTitle": true
               }
             }
@@ -688,7 +691,7 @@
                 }
               },
               "frame": {
-                "title": "Highest rated movie as per Rotten Tomatoes ",
+                "title": "Highest Rotten Tomatoes Rating",
                 "showTitle": true
               }
             }
@@ -734,7 +737,7 @@
               },
               "frame": {
                 "showTitle": true,
-                "title": "Lowest rated movie as per IMDb"
+                "title": "Lowest IMDb Rating"
               }
             }
           },
@@ -778,7 +781,7 @@
                 }
               },
               "frame": {
-                "title": "Lowest rated movie as per Rotten Tomatoes",
+                "title": "Lowest Rotten Tomatoes Rating",
                 "showTitle": true
               }
             }
@@ -885,7 +888,7 @@
             "x": 0,
             "y": 6,
             "width": 6,
-            "height": 6
+            "height": 8
           }
         },
         {
@@ -930,7 +933,7 @@
                 }
               },
               "frame": {
-                "title": "Distribution of IMDb Ratings",
+                "title": "Distribution of Rotten Tomatoes Ratings",
                 "showTitle": true
               },
               "mark": {
@@ -981,9 +984,9 @@
           },
           "position": {
             "x": 0,
-            "y": 12,
+            "y": 14,
             "width": 6,
-            "height": 6
+            "height": 9
           }
         },
         {
@@ -1014,13 +1017,13 @@
               },
               "frame": {
                 "showTitle": true,
-                "title": "Average IMDb Rating Netflix"
+                "title": "Average IMDb Rating - Netflix"
               }
             }
           },
           "position": {
-            "x": 1,
-            "y": 0,
+            "x": 0,
+            "y": 3,
             "width": 1,
             "height": 3
           }
@@ -1052,7 +1055,7 @@
                 }
               },
               "frame": {
-                "title": "Average Rotten Tomatoes Rating Netflix",
+                "title": "Average Rotten Tomatoes Rating - Netflix",
                 "showTitle": true
               }
             }
@@ -1092,7 +1095,7 @@
               },
               "frame": {
                 "showTitle": true,
-                "title": "Average IMDb Rating Amazon Prime Video"
+                "title": "Average IMDb Rating - Amazon Prime Video"
               }
             }
           },
@@ -1130,7 +1133,7 @@
                 }
               },
               "frame": {
-                "title": "Average Rotten Tomatoes Rating Amazon Prime Video",
+                "title": "Average Rotten Tomatoes Rating - Amazon Prime Video",
                 "showTitle": true
               }
             }
@@ -1194,7 +1197,7 @@
                 }
               },
               "frame": {
-                "title": "Genre Distribution",
+                "title": "Genre Distribution - Netflix",
                 "showTitle": true
               },
               "mark": {
@@ -1292,7 +1295,7 @@
                 }
               },
               "frame": {
-                "title": "Movie Release Distribution on Netflix",
+                "title": "Yearly Movie Release Distribution - Netflix",
                 "showTitle": true
               },
               "mark": {
@@ -1392,7 +1395,7 @@
                 }
               },
               "frame": {
-                "title": "Average IMDb Rating by Genre",
+                "title": "Average IMDb Rating by Genre - Netflix",
                 "showTitle": true
               },
               "mark": {
@@ -1492,7 +1495,7 @@
                 }
               },
               "frame": {
-                "title": "Average Rotten Tomatoes Rating by Genre",
+                "title": "Average Rotten Tomatoes Rating by Genre - Netflix",
                 "showTitle": true
               },
               "mark": {
@@ -1572,7 +1575,7 @@
             ],
             "spec": {
               "version": 3,
-              "widgetType": "line",
+              "widgetType": "scatter",
               "encodings": {
                 "x": {
                   "fieldName": "release_year",
@@ -1590,7 +1593,7 @@
                 }
               },
               "frame": {
-                "title": "Release Year vs Avg IMDb Rating",
+                "title": "Yearly Trend for Average IMDb Rating - Netflix",
                 "showTitle": true
               },
               "mark": {
@@ -1670,7 +1673,7 @@
             ],
             "spec": {
               "version": 3,
-              "widgetType": "line",
+              "widgetType": "scatter",
               "encodings": {
                 "x": {
                   "fieldName": "release_year",
@@ -1688,7 +1691,7 @@
                 }
               },
               "frame": {
-                "title": "Release Year vs Average Rotten Tomatoes Rating",
+                "title": "Yearly Trend For Average Rotten Tomatoes Rating -Netflix",
                 "showTitle": true
               },
               "mark": {
@@ -1796,7 +1799,7 @@
                 }
               },
               "frame": {
-                "title": "Genre Distribution",
+                "title": "Genre Distribution - Amazon Prime Video",
                 "showTitle": true
               },
               "mark": {
@@ -1894,7 +1897,7 @@
                 }
               },
               "frame": {
-                "title": "Movie Release Distribution on Netflix",
+                "title": "Yearly Movie Release Distribution - Amazon Prime Video",
                 "showTitle": true
               },
               "mark": {
@@ -1994,7 +1997,7 @@
                 }
               },
               "frame": {
-                "title": "Average IMDb Rating by Genre",
+                "title": "Average IMDb Rating by Genre - Amazon Prime Video",
                 "showTitle": true
               },
               "mark": {
@@ -2094,7 +2097,7 @@
                 }
               },
               "frame": {
-                "title": "Average Rotten Tomatoes Rating by Genre",
+                "title": "Average Rotten Tomatoes Rating by Genre - Amazon Prime Video",
                 "showTitle": true
               },
               "mark": {
@@ -2174,7 +2177,7 @@
             ],
             "spec": {
               "version": 3,
-              "widgetType": "line",
+              "widgetType": "scatter",
               "encodings": {
                 "x": {
                   "fieldName": "release_year",
@@ -2192,7 +2195,7 @@
                 }
               },
               "frame": {
-                "title": "Release Year vs Avg IMDb Rating",
+                "title": "Yearly Trend for Average IMDb Rating - Amazon Prime Video",
                 "showTitle": true
               },
               "mark": {
@@ -2272,7 +2275,7 @@
             ],
             "spec": {
               "version": 3,
-              "widgetType": "line",
+              "widgetType": "scatter",
               "encodings": {
                 "x": {
                   "fieldName": "release_year",
@@ -2290,7 +2293,7 @@
                 }
               },
               "frame": {
-                "title": "Release Year vs Average Rotten Tomatoes Rating",
+                "title": "Yearly Trend For Average Rotten Tomatoes Rating - Amazon Prime Video",
                 "showTitle": true
               },
               "mark": {

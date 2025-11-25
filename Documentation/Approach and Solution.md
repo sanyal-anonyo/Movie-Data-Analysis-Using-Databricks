@@ -103,3 +103,25 @@ Once the notebook is run various views are created in the gold layer.<br>
 
 
 Hence, a robust Medallion Architecture has been implemented to preserve and progressively refine data as per the objective stated previously.
+
+## Create a Visualisation Dashboard 
+
+The gold layer views that we created are used to create the Dashboard. the output of the dashboard are attached in the path below.
+
+**Path:-** Movie-Data-Engineering-Using-Databricks/Documentation/Dashboard PDF
+
+The dashboard has 4 pages,
+- **Overview -** Dashboard -Page 1.pdf
+- **Overall Rating Analysis -** Dashboard - Page 2.pdf
+- **Netflix Analysis -** Dashboard - Page 3.pdf
+- **Amazon Prime Video Analysis -** Dashboard - Page 4.pdf
+
+## Create and Schedule a Job 
+
+**Path:-** _Movie-Data-Engineering-Using-Databricks/Job pipeline setup for refresh Bronze, Silver and Gold layer Data/Create job pipeline for refreshing bronze and silver layer.ipynb_<br>
+
+We create a job pipeline to automate all the processes. That is, loading raw data from csv to Bronze, Transforming and Loading data from Bronze to Silver,  Creating views in gold layer and Refreshing Dashboard.
+
+The job pipeline looks as shown below. Please note that the setup tables are refreshed parallelly as they are not depending on one another. But the transaction table is refreshed after the setup tables as it is dependent on the setup data.
+
+![](Job_pipeline.jpg)
