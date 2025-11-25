@@ -54,10 +54,10 @@ Before proceeding let us see the ERD Diagram of the Silver layer schema that we 
 
 Let's break down the motivation behind the data model.<br>
 
-- Eliminate Data Redundency :- In the main table Genre would repeat for every row. For the Platform we have two separate columns. We bring it under one field platform.
-- Improve Data Integrity :- Using foreign keys ensures referential integrity between movies and their genres/platforms. Prevents invalid entries.
-- Support Scalability :- Adding new Platforms and genres become easier.
-- Align with best Practice :- The new design adheres to Third Normal Form (3NF). Each table represents a single concept (Movie, Genre, Platform). No transitive dependencies. Reduces anomalies during insert, update, delete operations.
+- **Eliminate Data Redundency :-** In the main table Genre would repeat for every row. For the Platform we have two separate columns. We bring it under one field platform.
+- **Improve Data Integrity :-** Using foreign keys ensures referential integrity between movies and their genres/platforms. Prevents invalid entries.
+- **Support Scalability :-** Adding new Platforms and genres become easier.
+- **Align with best Practice :-** The new design adheres to Third Normal Form (3NF). Each table represents a single concept (Movie, Genre, Platform). No transitive dependencies. Reduces anomalies during insert, update, delete operations.
 
 Even though we aren't tapping into all of the above mentioned advantages, but for the sake of best practices we are adhering to a proper data model. <br>
 
@@ -90,3 +90,13 @@ In this we are creating the main transaction table to hold all the movie related
 After the notebook is run a table is created in the silver layer.<br>
 
 ![](movies.jpg)
+
+## Create views in Gold Layer
+
+**Notebook Path:** _Movie-Data-Engineering-Using-Databricks/Create and Refresh Gold Layer View/create or replace gold layer views.ipynb_<br>
+
+In this we are creating various views which we can either send to other systems for processing or create a dashboard. In this project we are restrcting ourselved to just creating a basic dashboard.<br>
+
+Once the notebook is run various views are created in the gold layer.<br> 
+
+![](gold_view.jpg)
