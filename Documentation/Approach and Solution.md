@@ -102,4 +102,4 @@ Once the notebook is run various views are created in the gold layer.<br>
 ![](gold_view.jpg)
 
 
-The medallion architecture is created as per our target.
+Hence, a robust Medallion Architecture has been implemented to preserve and progressively refine data as per the objective stated previously.
