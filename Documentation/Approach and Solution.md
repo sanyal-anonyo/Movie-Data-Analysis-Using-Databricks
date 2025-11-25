@@ -100,3 +100,6 @@ In this we are creating various views which we can either send to other systems 
 Once the notebook is run various views are created in the gold layer.<br> 
 
 ![](gold_view.jpg)
+
+
+The medallion architecture is created as per our target.
